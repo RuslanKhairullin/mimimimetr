@@ -19,8 +19,10 @@
 ./gradlew clean build
 ```
 
-# 2. Запуск приложения
-#  Заполняем логины/пароли/токены в build/resources/main/application.properties
+# 2. Запуск приложения 
+
+Заполняем логины/пароли/токены в build/resources/main/application.properties
+
 ```shell
 java -jar /путь/до/mimimimetr-версия.jar \
  --spring.config.location=file:/путь/до/application.properties

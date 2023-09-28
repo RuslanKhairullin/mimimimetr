@@ -190,7 +190,8 @@ public class BotInteractionHandler implements UpdateHandler {
         log.info("createSendPhotoReply.enter;");
         return SendPhoto.builder()
                 .chatId(chatId)
-                .photo(new InputFile(new File(IMAGES_FOLDER_PATH + DELIMETER + catName + IMAGE_TYPE)))
+                .photo(new InputFile(new File(getClass().getClassLoader().getResource(IMAGES_FOLDER_PATH).getFile()
+                        + DELIMETER + catName + IMAGE_TYPE)))
                 .parseMode(ParseMode.HTML)
                 .build();
     }
